@@ -1,0 +1,84 @@
+/*---------------------- Index styles ------------------------------------*/
+
+body {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.header {
+    color:white;
+}
+
+.form-group {
+    color: white;
+}
+
+#formLanding {
+    width: 40%;
+    margin: auto;
+}
+
+.btn-group {
+    width: 40%;
+}
+
+.dropdown-menu {
+    text-align: center;
+}
+
+.btn {
+    color: white;
+}
+
+hr {
+    background-color: gray;
+}
+
+.footerText {
+    color:white;
+}
+
+/*---------------------------- Chatroom styles ------------------------------------*/
+
+.container-fluid {
+    background-color: lightslategray;
+}
+
+span {
+    color:white;
+}
+
+ul {
+    color:white;
+    font-weight: bold;
+}
+
+.nav-item {
+    color:white;
+    font-weight: normal;
+}
+
+p {
+    font-weight: normal;
+}
+
+img {
+    display: inline-flex;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-right: 30px; 
+}
+
+#message {
+    width: 60%;
+}
+
+.sidebarItems {
+    background-color: #905fa8;
+}
