@@ -86,18 +86,27 @@
                     </ul>
                 </div>
             </div>
+            <div class="chat-messages">
+            </div>
+            </main>
         </div>
     </div>
-    <footer>
-        <nav class="navbar navbar-light bg-dark">
-            <input type="text" class="form-control mx-2" id="message">
-            <button class="btn btn-outline-success">
+    <footer class="footer-chatroom bg-dark pt-2 py-2">
+        <form action="" class="form-inline" id="chat-form">
+            <input type="text" class="form-control ml-3 mb-2" id="message">
+            <button class="btn btn-outline-success ml-3 my-sm-0">
                 <img src="https://image.flaticon.com/icons/svg/3094/3094351.svg" alt="send icon" width="40px"
                     height="40px">
             </button>
-        </nav>
+        </form>
     </footer>
 
+    <!-- QS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+        integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+        crossorigin="anonymous"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

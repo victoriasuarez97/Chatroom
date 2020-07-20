@@ -2,14 +2,36 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const socketio = require('socket.io');
+const formatMessages = require('../chatroom/utils/messages');
+
+const bot = 'Le Chat Room bot';
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
+
+// Run when client connects
 io.on('connection', socket => {
-  console.log(`New WebSocket connection`);
+  // Welcome current User
+  socket.emit('message', formatMessages(bot, `Welcome to Le Chat Room 🐈`));
+
+  // Broadcast when a user connects
+  socket.broadcast.emit(
+    'message',
+    formatMessages(bot, `A user has joined the room 🚪`)
+  );
+
+  // Run when the client disconnects
+  socket.on('disconnect', () => {
+    io.emit('message', formatMessages(bot, `A user has left the room 🚪🚶`));
+  });
+
+  // Listen to chatMessage
+  socket.on('chatMessage', message => {
+    io.emit('message', formatMessages('USER', message));
+  });
 });
 
 app.use(express.static(path.join(__dirname, 'public')));

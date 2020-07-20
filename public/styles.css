@@ -78,3 +78,35 @@ button {
 #message {
     width: 90%;
 }
+
+.chat-messages {
+    position: absolute;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.messages-received {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-color: #905fa8;
+    border-radius: 3px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 380px;
+    padding: 5px 10px 5px 12px;
+    border-style: none;
+}
+
+.messages-sent {
+    box-sizing: border-box;
+    background-color: #fd9ac8;
+    border-radius: 3px;
+    color: white;
+    margin-top: 15px;
+    margin-left: 1080px;
+    margin-right: 45px;
+    padding: 5px 10px 5px 12px;
+    float: right;
+    border-style: none;
+}
