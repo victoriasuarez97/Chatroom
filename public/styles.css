@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    color:white;
+    color: white;
 }
 
 .form-group {
@@ -35,7 +35,7 @@ hr {
 }
 
 .footerText {
-    color:white;
+    color: white;
 }
 
 /*---------------------------- Chatroom styles ------------------------------------*/
@@ -45,16 +45,16 @@ hr {
 }
 
 span {
-    color:white;
+    color: white;
 }
 
 ul {
-    color:white;
+    color: white;
     font-weight: bold;
 }
 
 .nav-item {
-    color:white;
+    color: white;
     font-weight: normal;
 }
 
@@ -72,13 +72,9 @@ li {
 }
 
 button {
-    margin-right: 30px; 
+    margin-right: 30px;
 }
 
 #message {
-    width: 60%;
-}
-
-.sidebarItems {
-    background-color: #905fa8;
+    width: 90%;
 }

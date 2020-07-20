@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Le Chat Room</title>
     <!-- Bootstrap CDN | CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Bootstrap CDN | JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Le Chat Room</title>
 </head>
-<body class="text-center mx-auto bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+<body class="text-center mx-auto bg-dark">
+    <div class="conver-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <div class="header">
-            <img class="d-block mt-4 mx-auto mt-4 mb-4" src="https://image.flaticon.com/icons/svg/1089/1089421.svg" alt="Le Chatroom logo" width="100px" height="100px">
+            <img class="d-block mx-auto mt-4 mb-4" src="https://image.flaticon.com/icons/svg/1089/1089421.svg"
+                alt="Le Chatroom logo" width="100px" height="100px">
             <h1 class="mb-3">Le Chat Room</h1>
         </div>
-        <form action="">
+        <form>
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" class="form-control" id="formLanding" aria-describedby="User">
-                <small class="form-text text-mute">Choose a name to be identified by your closest
-                                        friends.</small>
+                <small class="form-text text-muted">Choose a name to be identified by your closest friends.
+                </small>
             </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-warning dropdown-toggle mb-4" id="formLanding"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Rooms
+                </button>
+                <div class="dropdown-menu mx-auto">
+                    <a href="" class="dropdown-item">Developers</a>
+                    <a href="" class="dropdown-item">Work</a>
+                    <a href="" class="dropdown-item">Uni</a>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input">
+                <label for="checkbox" class="form-check-label">Keep me signed in.</label>
+            </div>
+            <a href="../chatroom.html" class="btn btn-success mb-5" role="button">Go</a>
         </form>
+        <footer>
+            <hr width="50%">
+            <small class="footerText">Created by Victoria Suarez | July 2020</small>
+        </footer>
     </div>
 </body>
+
 </html>
