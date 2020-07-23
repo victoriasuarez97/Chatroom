@@ -40,10 +40,6 @@ hr {
 
 /*---------------------------- Chatroom styles ------------------------------------*/
 
-.container-fluid {
-    background-color: lightslategray;
-}
-
 span {
     color: white;
 }
@@ -73,10 +69,6 @@ li {
 
 button {
     margin-right: 30px;
-}
-
-#message {
-    width: 90%;
 }
 
 .chat-messages {
@@ -109,4 +101,15 @@ button {
     padding: 5px 10px 5px 12px;
     float: right;
     border-style: none;
+}
+
+#sidebarMenu {
+    z-index: 1;
+}
+
+.sidebar-sticky {
+    position: sticky;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 48px);
 }

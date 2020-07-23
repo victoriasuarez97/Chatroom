@@ -13,7 +13,6 @@ const chatMessages = document.querySelector('.chat-messages');
 chatMessages.scroll = chatMessages.scrollHeight;
 
 // Message submit
-
 chatForm.addEventListener('submit', e => {
   e.preventDefault();
 
