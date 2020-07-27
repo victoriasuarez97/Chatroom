@@ -1,15 +1,9 @@
 /*---------------------- Index styles ------------------------------------*/
 
-body {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.header {
-    color: white;
-}
-
-.form-group {
+.header,
+.form-group,
+.btn,
+.footerText {
     color: white;
 }
 
@@ -26,16 +20,8 @@ body {
     text-align: center;
 }
 
-.btn {
-    color: white;
-}
-
 hr {
     background-color: gray;
-}
-
-.footerText {
-    color: white;
 }
 
 /*---------------------------- Chatroom styles ------------------------------------*/
@@ -63,6 +49,7 @@ img {
 }
 
 li {
+    width: 100%;
     list-style-type: none;
     margin-bottom: 5px;
 }
@@ -71,40 +58,33 @@ button {
     margin-right: 30px;
 }
 
-.chat-messages {
+#chat-style {
     position: absolute;
-    overflow-y: auto;
-    z-index: 1;
 }
 
-.messages-received {
-    display: inline-block;
+#msgReceived {
+    width: 300px;
+    float: left;
     vertical-align: top;
     box-sizing: border-box;
     background-color: #905fa8;
     border-radius: 3px;
     color: white;
     margin-top: 15px;
-    margin-left: 380px;
     padding: 5px 10px 5px 12px;
     border-style: none;
 }
 
-.messages-sent {
+#msgSent {
+    width: 300px;
+    float: right;
     box-sizing: border-box;
     background-color: #fd9ac8;
     border-radius: 3px;
     color: white;
     margin-top: 15px;
-    margin-left: 1080px;
-    margin-right: 45px;
     padding: 5px 10px 5px 12px;
-    float: right;
     border-style: none;
-}
-
-#sidebarMenu {
-    z-index: 1;
 }
 
 .sidebar-sticky {
@@ -112,4 +92,8 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     height: calc(100vh - 48px);
+}
+
+#sidebarMenu {
+    z-index: 1;
 }
