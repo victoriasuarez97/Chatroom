@@ -7,7 +7,7 @@ socket.on('message', message => {
 });
 
 const chatForm = document.getElementById('chat-form');
-const chatMessages = document.querySelector('.chat-messages');
+const chatMessages = document.getElementById('chat-messages');
 
 // Scroll
 chatMessages.scroll = chatMessages.scrollHeight;
@@ -29,13 +29,14 @@ chatForm.addEventListener('submit', e => {
 
 // Output message to DOM
 function outputMessage(message) {
-  const div = document.createElement('div');
-  div.classList.add('messages-sent');
-  div.innerHTML = `<small class="details">${message.username}<span> ${
-    message.time
-  }</span></small>
-  <p class="sent">${message.text}</p>`;
-  document.querySelector('.chat-messages').appendChild(div);
+  const li = document.createElement('li');
+  li.className = 'received';
+  document.getElementById('msgSent');
+  li.innerHTML = `<small class="details">${
+    message.username
+  }<span class="align-top"> ${message.time}</span></small>
+  <p>${message.text}</p>`;
+  document.getElementById('chat-messages').appendChild(li);
 }
 
 // Get username and room from URL

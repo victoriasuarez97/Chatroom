@@ -25,7 +25,6 @@ hr {
 }
 
 /*---------------------------- Chatroom styles ------------------------------------*/
-
 span {
     color: white;
 }
@@ -62,8 +61,15 @@ button {
     position: absolute;
 }
 
+.received {
+    color: #fd9ac8;
+    margin: auto;
+    text-align: center;
+    margin-top: 5%;
+}
+
 #msgReceived {
-    width: 300px;
+    width: 280px;
     float: left;
     vertical-align: top;
     box-sizing: border-box;
@@ -76,15 +82,16 @@ button {
 }
 
 #msgSent {
-    width: 300px;
+    width: 280px;
     float: right;
     box-sizing: border-box;
     background-color: #fd9ac8;
     border-radius: 3px;
     color: white;
-    margin-top: 15px;
     padding: 5px 10px 5px 12px;
     border-style: none;
+    margin-right: 5%;
+    margin-top: 10%;
 }
 
 .sidebar-sticky {
@@ -92,8 +99,4 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     height: calc(100vh - 48px);
-}
-
-#sidebarMenu {
-    z-index: 1;
 }
