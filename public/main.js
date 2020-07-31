@@ -2,7 +2,6 @@ const socket = io();
 
 // Message from server
 socket.on('message', message => {
-  console.log(message);
   outputMessage(message);
 });
 
@@ -30,8 +29,7 @@ chatForm.addEventListener('submit', e => {
 // Output message to DOM
 function outputMessage(message) {
   const li = document.createElement('li');
-  li.className = 'received';
-  document.getElementById('msgSent');
+  li.id = 'msgReceived';
   li.innerHTML = `<small class="details">${
     message.username
   }<span class="align-top"> ${message.time}</span></small>

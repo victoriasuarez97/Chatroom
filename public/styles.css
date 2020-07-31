@@ -69,8 +69,7 @@ button {
 }
 
 #msgReceived {
-    width: 280px;
-    float: left;
+    width: 100%;
     vertical-align: top;
     box-sizing: border-box;
     background-color: #905fa8;
@@ -81,22 +80,10 @@ button {
     border-style: none;
 }
 
-#msgSent {
-    width: 280px;
-    float: right;
-    box-sizing: border-box;
-    background-color: #fd9ac8;
-    border-radius: 3px;
-    color: white;
-    padding: 5px 10px 5px 12px;
-    border-style: none;
-    margin-right: 5%;
-    margin-top: 10%;
-}
-
 .sidebar-sticky {
     position: sticky;
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100vh - 48px);
+    height: 100vh;
+    z-index: 1;
 }
