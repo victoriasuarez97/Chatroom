@@ -1,15 +1,13 @@
 const socket = io();
+const chatMessages = document.getElementById('chat-messages');
+const chatForm = document.getElementById('chat-form');
 
 // Message from server
-socket.on('message', message => {
+socket.on('msgReceived', message => {
   outputMessage(message);
+
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 });
-
-const chatForm = document.getElementById('chat-form');
-const chatMessages = document.getElementById('chat-messages');
-
-// Scroll
-chatMessages.scroll = chatMessages.scrollHeight;
 
 // Message submit
 chatForm.addEventListener('submit', e => {

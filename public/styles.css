@@ -58,33 +58,19 @@ img {
 li {
     width: 100%;
     list-style-type: none;
-    margin-bottom: 5px;
+    margin-bottom: 1%;
 }
 
 button {
     margin-right: 30px;
 }
 
-#chat-style {
-    position: absolute;
-}
-
-.received {
-    color: #fd9ac8;
-    margin: auto;
-    text-align: center;
-    margin-top: 5%;
-    z-index: -1;
-}
-
 #msgReceived {
     width: 100%;
-    vertical-align: top;
     box-sizing: border-box;
     background-color: #905fa8;
     border-radius: 3px;
     color: white;
-    margin-top: 15px;
     padding: 5px 10px 5px 12px;
     border-style: none;
     z-index: -1;
