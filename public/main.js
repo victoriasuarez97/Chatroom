@@ -1,6 +1,8 @@
 const socket = io();
 const chatMessages = document.getElementById('chat-messages');
 const chatForm = document.getElementById('chat-form');
+const username = document.getElementById('username');
+socket.emit('new-user', username);
 
 // Message from server
 socket.on('msgReceived', message => {
@@ -28,16 +30,8 @@ chatForm.addEventListener('submit', e => {
 function outputMessage(message) {
   const li = document.createElement('li');
   li.id = 'msgReceived';
-  li.innerHTML = `<small class="details">${
-    message.username
-  }<span class="align-top"> ${message.time}</span></small>
+  li.innerHTML = `<small>
+  ${username}<span class="align-top"> ${message.time}</span></small>
   <p>${message.text}</p>`;
   document.getElementById('chat-messages').appendChild(li);
 }
-
-// Get username and room from URL
-const { username, room } = Qs.parse(location.search, {
-  ignoreQueryPrefix: true,
-});
-
-console.log(username, room);
