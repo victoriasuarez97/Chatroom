@@ -12,6 +12,11 @@
     margin: auto;
 }
 
+#username {
+    width: 40%;
+    margin: auto;
+}
+
 .btn-group {
     width: 40%;
 }
@@ -30,7 +35,7 @@ hr {
 }
 
 h6 {
-    margin-top: 70%;
+    margin: 70% 0% 0% 0%;
 }
 
 span {
@@ -58,11 +63,11 @@ img {
 li {
     width: 100%;
     list-style-type: none;
-    margin-bottom: 1%;
+    margin: 1% 0%;
 }
 
 button {
-    margin-right: 30px;
+    margin: 0px 30px;
 }
 
 #msgReceived {
