@@ -7,7 +7,7 @@ const {
   userJoin,
   getUserJoin,
   userLeave,
-  getRoom,
+  getRoomUsers,
 } = require('../chatroom/utils/users');
 
 const app = express();
@@ -27,6 +27,11 @@ io.on('connection', socket => {
       formatMessages(bot, `Welcome to Le Chat Room 🐈`)
     );
 
+    io.to(user.rooms).emit('room-users', {
+      room: user.rooms,
+      users: getRoomUsers(user.rooms),
+    });
+
     socket.broadcast
       .to(user.rooms)
       .emit(
@@ -44,6 +49,11 @@ io.on('connection', socket => {
         formatMessages(bot, `${user.username} has left the room 🚪🚶`)
       );
     }
+
+    io.to(user.rooms).emit('room-users', {
+      room: user.rooms,
+      users: getRoomUsers(user.rooms),
+    });
   });
 
   socket.on('chatMessage', message => {
