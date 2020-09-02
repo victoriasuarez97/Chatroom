@@ -32,32 +32,26 @@
                 alt="Le Chatroom logo" width="100px" height="100px">
             <h1 class="mb-3">Le Chat Room</h1>
         </div>
-        <form action="chatroom.html">
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" id="username" required>
-            <small class="form-text text-muted">Choose a name to be identified by your closest friends.
-            </small>
-            <div class="btn-group">
-                <button type="button" class="btn btn-warning dropdown-toggle mb-4" id="formLanding"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Rooms
-                </button>
-                <div class="dropdown-menu mx-auto">
-                    <a href="" class="dropdown-item">Developers</a>
-                    <a href="" class="dropdown-item">Work</a>
-                    <a href="" class="dropdown-item">Uni</a>
-                </div>
+        <form action="chatroom.html" id="index-form">
+            <div id="user">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" autocomplete="off" required>
             </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input">
-                <label for="checkbox" class="form-check-label">Keep me signed in.</label>
+            <div id="dropdown">
+                <label for="rooms" id="rooms">Rooms</label>
+                <select name="rooms" id="dropdown-options">
+                    <option value="Developers" class="dropdown-item">Developers</option>
+                    <option value="Work" class="dropdown-item">Work</option>
+                    <option value="Uni" class="dropdown-item">Uni</option>
+                </select>
             </div>
-            <button class="btn btn-success mb-5" type="submit">Go</button>
+            <button class="btn btn-success mb-5" type="submit" id="submit-button">Go</button>
         </form>
         <footer>
             <hr width="50%">
-            <small class="footerText">Created by Victoria Suarez | July 2020</small>
+            <small class="footer-text">Created by Victoria Suarez 💖🐈 | July 2020</small>
         </footer>
+    </div>
     </div>
     <script src="main.js"></script>
 </body>

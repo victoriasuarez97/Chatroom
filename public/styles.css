@@ -1,32 +1,54 @@
 /*---------------------- Index styles ------------------------------------*/
-
-.header,
-.form-group,
-.btn,
-.footerText {
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff
 }
 
-#formLanding {
+#user {
     width: 40%;
     margin: auto;
-}
-
-#username {
-    width: 40%;
-    margin: auto;
-}
-
-.btn-group {
-    width: 40%;
-}
-
-.dropdown-menu {
     text-align: center;
 }
 
+#rooms {
+    padding: 20px 0px 0px;
+}
+
+#dropdown {
+    background: none;
+    margin: auto;
+    cursor: pointer;
+    width: 40%;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+}
+
+#dropdown-options {
+    width: 100%;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    z-index: 1;
+    margin: 0px 0px 20px;
+    text-align: center;
+    padding: 5px;
+}
+
 hr {
-    background-color: gray;
+    margin: auto;
+    background-color: rgb(136, 135, 135)
+}
+
+submit-button {
+    margin: 20px;
+}
+
+.footer-text {
+    padding: 10px;
 }
 
 /*---------------------------- Chatroom styles ------------------------------------*/
@@ -35,20 +57,14 @@ hr {
 }
 
 h6 {
-    margin: 70% 0% 0% 0%;
-}
-
-span {
-    color: white;
+    margin: 70% 0% 0%;
 }
 
 ul {
-    color: white;
     font-weight: bold;
 }
 
 .nav-item {
-    color: white;
     font-weight: normal;
 }
 
@@ -75,7 +91,6 @@ button {
     box-sizing: border-box;
     background-color: #905fa8;
     border-radius: 3px;
-    color: white;
     padding: 5px 10px 5px 12px;
     border-style: none;
     z-index: -1;
