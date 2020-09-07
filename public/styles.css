@@ -1,4 +1,4 @@
-/*---------------------- Index styles ------------------------------------*/
+/*---------------------- Log In styles ------------------------------------*/
 
 * {
     margin: 0;
@@ -6,6 +6,11 @@
     box-sizing: border-box;
     color: #ffffff;
     font-weight: normal;
+}
+
+body {
+    box-sizing: border-box;
+    margin: auto;
 }
 
 #user {
@@ -56,7 +61,7 @@ submit-button {
 /*---------------------------- Chatroom styles ------------------------------------*/
 
 #header {
-    z-index: 1;
+    z-index: 200;
 }
 
 h6 {
@@ -88,11 +93,13 @@ button {
     border-radius: 3px;
     padding: 5px 10px 5px 12px;
     border-style: none;
-    z-index: -1;
+    z-index: -100;
+    margin: 12px;
 }
 
 #sidebarMenu {
     position: fixed;
+    z-index: 100;
 }
 
 .sidebar-sticky {
@@ -100,5 +107,4 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     height: 100vh;
-    z-index: 2;
 }
