@@ -8,8 +8,6 @@ const { username, rooms } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-console.log(username, rooms);
-
 // Join room
 socket.emit('join-room', { username, rooms });
 
@@ -23,7 +21,13 @@ socket.on('room-users', ({ room, users }) => {
 socket.on('msgReceived', message => {
   outputMessage(message);
 
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  const shouldScroll =
+    chatMessages.scrollTop + chatMessages.clientHeight ===
+    chatMessages.scrollHeight;
+
+  if (!shouldScroll) {
+    scrollToBottom();
+  }
 });
 
 // Message submit
@@ -40,6 +44,10 @@ chatForm.addEventListener('submit', e => {
   e.target.elements.message.value = ``;
   e.target.elements.message.focus();
 });
+
+function scrollToBottom() {
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
 
 // Output message to DOM
 function outputMessage(message) {
