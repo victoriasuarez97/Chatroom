@@ -89,7 +89,8 @@ button {
 #chat-messages {
     overflow-y: auto;
     overflow-x: hidden;
-    height: 500px;
+    height: 505px;
+    margin: 10px 0px;
 }
 
 #msgReceived {
@@ -107,6 +108,14 @@ button {
 #sidebarMenu {
     position: fixed;
     z-index: 100;
+}
+
+#users {
+    z-index: 200;
+}
+
+#submit-message {
+    margin: 0px;
 }
 
 .sidebar-sticky {
@@ -132,5 +141,5 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(105, 72, 121)a;
+    background-color: rgb(105, 72, 121);
 }
