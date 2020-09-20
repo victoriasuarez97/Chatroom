@@ -47,7 +47,7 @@ body {
 
 hr {
     margin: auto;
-    background-color: rgb(136, 135, 135)
+    background-color: rgb(136, 135, 135);
 }
 
 submit-button {
@@ -90,11 +90,10 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     height: 505px;
-    margin: 10px 0px;
 }
 
 #msgReceived {
-    width: 100%;
+    width: 95%;
     box-sizing: border-box;
     background-color: #905fa8;
     border-radius: 3px;
@@ -102,7 +101,6 @@ button {
     border-style: none;
     z-index: -100;
     margin: 12px;
-    right: 0px;
 }
 
 #sidebarMenu {
