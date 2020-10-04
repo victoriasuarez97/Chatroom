@@ -108,8 +108,13 @@ button {
     z-index: 100;
 }
 
-#users {
-    z-index: 200;
+#users li {
+    color: #6c757d;
+    font-size: 80%;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 #submit-message {
