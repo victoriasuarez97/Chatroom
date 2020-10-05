@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 const socket = io();
 const chatMessages = document.getElementById('chat-messages');
 const chatForm = document.getElementById('chat-form');
