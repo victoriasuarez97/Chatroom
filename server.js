@@ -2,13 +2,13 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const socketio = require('socket.io');
-const formatMessages = require('../chatroom/utils/messages');
+const formatMessages = require('../chatroom/public/utils/messages');
 const {
   userJoin,
   getUserJoin,
   userLeave,
   getRoomUsers,
-} = require('../chatroom/utils/users');
+} = require('../chatroom/public/utils/users');
 
 const app = express();
 const server = http.createServer(app);
