@@ -60,19 +60,29 @@ function outputMessage(message) {
   document.getElementById('chat-messages').appendChild(li);
 }
 
+// Output room name and icon to DOM
 function outputRoomName(room) {
   roomName.innerText = room;
-  if (roomName.innerText === "Bernardo's") {
+  if (
+    roomName.innerText === "Bernardo's" &&
+    !document.getElementById('room-icon')
+  ) {
     const berniImage = document.createElement('span');
     berniImage.id = 'room-icon';
     berniImage.innerHTML = `<img src="./utils/img/bernardo.svg" width="40px">`;
     document.getElementById('room-list').appendChild(berniImage);
-  } else if (roomName.innerText === "Marcelo's") {
+  } else if (
+    roomName.innerText === "Marcelo's" &&
+    !document.getElementById('room-icon')
+  ) {
     const marceImage = document.createElement('span');
     marceImage.id = 'room-icon';
     marceImage.innerHTML = `<img src="./utils/img/marcelo.svg" width="40px">`;
     document.getElementById('room-list').appendChild(marceImage);
-  } else if (roomName.innerText === "Luna's") {
+  } else if (
+    roomName.innerText === "Luna's" &&
+    !document.getElementById('room-icon')
+  ) {
     const lunaImage = document.createElement('span');
     lunaImage.id = 'room-icon';
     lunaImage.innerHTML = `<img src="./utils/img/luna.svg" width="40px">`;
@@ -80,6 +90,7 @@ function outputRoomName(room) {
   }
 }
 
+// Output users added to list to DOM
 function outputUsers(users) {
   userList.innerHTML = `
     ${users.map(user => `<li>${user.username}</li>`).join('')}
