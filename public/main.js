@@ -62,6 +62,22 @@ function outputMessage(message) {
 
 function outputRoomName(room) {
   roomName.innerText = room;
+  if (roomName.innerText === "Bernardo's") {
+    const berniImage = document.createElement('span');
+    berniImage.id = 'room-icon';
+    berniImage.innerHTML = `<img src="./utils/img/bernardo.svg" width="40px">`;
+    document.getElementById('room-list').appendChild(berniImage);
+  } else if (roomName.innerText === "Marcelo's") {
+    const marceImage = document.createElement('span');
+    marceImage.id = 'room-icon';
+    marceImage.innerHTML = `<img src="./utils/img/marcelo.svg" width="40px">`;
+    document.getElementById('room-list').appendChild(marceImage);
+  } else if (roomName.innerText === "Luna's") {
+    const lunaImage = document.createElement('span');
+    lunaImage.id = 'room-icon';
+    lunaImage.innerHTML = `<img src="./utils/img/luna.svg" width="40px">`;
+    document.getElementById('room-list').appendChild(lunaImage);
+  }
 }
 
 function outputUsers(users) {

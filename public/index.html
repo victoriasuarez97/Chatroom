@@ -24,31 +24,33 @@
 </head>
 
 <body class="text-center mx-auto bg-dark">
-    <div class="conver-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <div class="header">
-            <img class="d-block mx-auto mt-4 mb-4" src="https://image.flaticon.com/icons/svg/1089/1089421.svg"
-                alt="Le Chatroom logo" width="100px" height="100px">
-            <h1 class="mb-3">Le Chat Room</h1>
-        </div>
-        <form action="chatroom.html" id="index-form">
-            <div id="user">
-                <label for="username">Username</label>
-                <input type="text" name="username" class="form-control" autocomplete="off" required>
+    <main>
+        <div class="conver-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <div class="header">
+                <img class="d-block mx-auto mt-4 mb-4" src="https://image.flaticon.com/icons/svg/1089/1089421.svg"
+                    alt="Le Chatroom logo" tabindex="0" width="100px" height="100px">
+                <h1 class="mb-3" tabindex="0">Le Chat Room</h1>
             </div>
-            <div id="dropdown">
-                <label for="rooms" id="rooms">Rooms</label>
-                <select name="rooms" id="dropdown-options">
-                    <option value="Developers" class="dropdown-item">Developers</option>
-                    <option value="Work" class="dropdown-item">Work</option>
-                    <option value="Uni" class="dropdown-item">Uni</option>
-                </select>
-            </div>
-            <button class="btn btn-success mb-5" type="submit" id="submit-button">Go</button>
-        </form>
-        <footer>
-            <hr width="50%">
-            <small class="footer-text">Created by Victoria Suarez 💖🐈 | July 2020</small>
-        </footer>
+            <form action="chatroom.html" id="index-form">
+                <div id="user">
+                    <label for="username" tabindex="0">Username</label>
+                    <input type="text" name="username" class="form-control" autocomplete="off" required>
+                </div>
+                <div id="dropdown">
+                    <label for="rooms" id="rooms" tabindex="0">Rooms</label>
+                    <select name="rooms" id="dropdown-options" tabindex="0">
+                        <option value="Bernardo's" class="dropdown-item">Bernardo's</option>
+                        <option value="Marcelo's" class="dropdown-item">Marcelo's</option>
+                        <option value="Luna's" class="dropdown-item">Luna's</option>
+                    </select>
+                </div>
+                <button class="btn btn-success mb-5" type="submit" id="submit-button">Go</button>
+            </form>
+    </main>
+    <footer>
+        <hr width="50%">
+        <small class="footer-text" role="footer" tabindex="0">Created by Victoria Suarez 💖🐈 | July 2020</small>
+    </footer>
     </div>
     </div>
     <script src="main.js"></script>

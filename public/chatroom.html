@@ -24,37 +24,37 @@
 </head>
 
 <body class="bg-secondary">
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" id="header">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" id="header" tabindex="0">
         <a href="#" class="navbar-brand">
             <img src="https://image.flaticon.com/icons/svg/1089/1089421.svg" alt="Le Chat Room logo"
-                class="ml-3 mb-2 mt-2 d-inline-block" width="40px" height="40px">
-            <span>Le Chat Room</span>
+                class="ml-3 mb-2 mt-2 d-inline-block" width="40px" height="40px" tabindex="0">
+            <span tabindex="0">Le Chat Room</span>
         </a>
         <form action="" class="form-inline ml-auto">
             <button class="navbar-toggler d-md-none collapsed my-2 my-sm-0" type="button" data-toggle="collapse"
                 data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="index.html" class="btn btn-outline-danger my-2 my-sm-0 mr-4" role="button">Leave</a>
+            <a href="index.html" class="btn btn-outline-danger my-2 my-sm-0 mr-4" role="button" tabdindex="0">Leave</a>
         </form>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" role="article">
         <div class="row">
             <nav id="sidebarMenu" class="col-lg-3 col-md-3 d-md-block bg-dark h-100 sidebar collapse">
                 <div class="sidebar-sticky pl-3 pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item d-flex justify-content-between 1h-condensed mb-3 bg-dark pt-3">
-                            <div>
-                                <h6 class="">
+                            <div id="room-list">
+                                <h6 tabindex="0">
                                     Room Name
                                 </h6>
-                                <small class="text-muted" id="room-name"></small>
+                                <small class="text-muted" id="room-name" aria-label="Room's name" tabindex="0"></small>
                             </div>
                         </li>
                         <li class="nav-item d-flex justify-content-between 1h-condensed bg-dark pt-3">
-                            <h6 class="my-0">Users</h6>
-                            <ul id="users">
-                                <li></li>
+                            <h6 class="my-0" tabindex="0">Users</h6>
+                            <ul id="users" aria-label="List of users" tabindex="0">
+                                <li tabindex="0"></li>
                             </ul>
                         </li>
                     </ul>
@@ -73,7 +73,7 @@
             <div class="input-group">
                 <input type="text" class="form-control" id="message" placeholder="Type message" autocomplete="off">
                 <div class="input-group-append">
-                    <button type="submit" class="btn btn-outline-success" id="submit-message">
+                    <button type="submit" class="btn btn-outline-success" id="submit-message" aria-label="Send message">
                         <img src="https://image.flaticon.com/icons/svg/892/892657.svg" alt="send icon" width="22px"
                             height="22px">
                     </button>

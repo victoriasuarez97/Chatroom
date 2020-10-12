@@ -1,7 +1,7 @@
+/* eslint-disable import/order */
 const express = require('express');
 const path = require('path');
 const http = require('http');
-const socketio = require('socket.io');
 const formatMessages = require('../chatroom/public/utils/messages');
 const {
   userJoin,
@@ -12,7 +12,7 @@ const {
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio(server);
+const io = require('socket.io')(server);
 
 const PORT = process.env.PORT || 3000;
 

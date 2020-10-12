@@ -65,7 +65,7 @@ submit-button {
 }
 
 h6 {
-    margin: 70% 0% 0%;
+    margin: 20% 0% 0%;
 }
 
 ul {
@@ -126,6 +126,10 @@ button {
     overflow-y: auto;
     overflow-x: hidden;
     height: 100vh;
+}
+
+#room-icon {
+   margin-left: 185px;
 }
 
 ::-webkit-scrollbar {
