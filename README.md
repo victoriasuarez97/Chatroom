@@ -16,5 +16,3 @@ Now you have <b>Le Chat Room</b> running on localhost:3000 ✨🤠
 All that is left to do is choose a name to be shown with your messages and the room you want to enter.
 
 Hope you enjoy it 💖
-
-Github: <https://github.com/victoriasuarez97>
