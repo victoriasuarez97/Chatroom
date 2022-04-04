@@ -2,8 +2,8 @@
 const socket = io();
 const chatMessages = document.getElementById('chat-messages');
 const chatForm = document.getElementById('chat-form');
-const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const roomName = document.getElementById('room-name');
 
 const { username, rooms } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
@@ -60,33 +60,29 @@ function outputMessage(message) {
   document.getElementById('chat-messages').appendChild(li);
 }
 
+function createRoomLogo(ownerName) {
+  const roomLogo = document.createElement('span');
+  roomLogo.id = 'room-icon';
+  roomLogo.innerHTML = `<img src="./utils/img/${ownerName}.svg" width="40px">`;
+  document.getElementById('room-list').appendChild(roomLogo);
+}
+
 // Output room name and icon to DOM
 function outputRoomName(room) {
   roomName.innerText = room;
-  if (
-    roomName.innerText === "Bernardo's" &&
-    !document.getElementById('room-icon')
-  ) {
-    const berniImage = document.createElement('span');
-    berniImage.id = 'room-icon';
-    berniImage.innerHTML = `<img src="./utils/img/bernardo.svg" width="40px">`;
-    document.getElementById('room-list').appendChild(berniImage);
-  } else if (
-    roomName.innerText === "Marcelo's" &&
-    !document.getElementById('room-icon')
-  ) {
-    const marceImage = document.createElement('span');
-    marceImage.id = 'room-icon';
-    marceImage.innerHTML = `<img src="./utils/img/marcelo.svg" width="40px">`;
-    document.getElementById('room-list').appendChild(marceImage);
-  } else if (
-    roomName.innerText === "Luna's" &&
-    !document.getElementById('room-icon')
-  ) {
-    const lunaImage = document.createElement('span');
-    lunaImage.id = 'room-icon';
-    lunaImage.innerHTML = `<img src="./utils/img/luna.svg" width="40px">`;
-    document.getElementById('room-list').appendChild(lunaImage);
+
+  switch (room) {
+    case 'Bernardo':
+      createRoomLogo('bernardo');
+      break;
+    case 'Marcelo':
+      createRoomLogo('marcelo');
+      break;
+    case 'Luna':
+      createRoomLogo('luna');
+      break;
+    default:
+      createRoomLogo('luna');
   }
 }
 
